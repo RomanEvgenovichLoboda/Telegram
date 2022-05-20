@@ -1,0 +1,421 @@
+﻿<Window x:Class="Telegram.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Telegram"
+        mc:Ignorable="d"
+        Title="Telegram" Height="700" Width="1100">
+    <Window.Resources>
+        <Style x:Key="NamesText">
+            <Setter Property="Control.Margin" Value="5"></Setter>
+            <Setter Property="Control.FontWeight" Value="Bold"></Setter>
+            <Setter Property="Control.FontSize" Value="11"></Setter>
+        </Style>
+        <Style x:Key="LabelTime">
+            <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Control.HorizontalContentAlignment" Value="Right"></Setter>
+            <Setter Property="Control.Foreground" Value="#FFC2C7CB"></Setter>
+            <Setter Property="Control.FontSize" Value="10"></Setter>
+        </Style>
+        <Style x:Key="MessageLabel">
+            <Setter Property="Control.Margin" Value="5,0"></Setter>
+            <Setter Property="Control.FontSize" Value="11"></Setter>
+            <Setter Property="Control.Foreground" Value="#FFC2C7CB"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="BorderMessageCount">
+            <Setter Property="Control.Background" Value="LawnGreen"></Setter>
+            <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Control.BorderBrush" Value="LawnGreen"></Setter>
+            <Setter Property="Control.BorderThickness" Value="3"></Setter>
+            <Setter Property="Control.Margin" Value="0,3"></Setter>
+            <Setter Property="Height" Value="15"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="GreyBorderMessageCount">
+            <Setter Property="Control.Background" Value="#FFC4C5CA"></Setter>
+            <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Control.BorderBrush" Value="#FFC4C5CA"></Setter>
+            <Setter Property="Control.BorderThickness" Value="2"></Setter>
+            <Setter Property="Control.Margin" Value="0,2"></Setter>
+            <Setter Property="Height" Value="15"></Setter>
+        </Style>
+        <Style x:Key="WachPict">
+            <Setter Property="Control.Height" Value="20"></Setter>
+            <Setter Property="Control.Width" Value="20"></Setter>
+            <Setter Property="Control.HorizontalAlignment" Value="Left"></Setter>
+        </Style>
+
+    </Window.Resources>
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="250" Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <Image Height="40" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Style="{StaticResource NamesText}">Campus Party</TextBlock>
+                    <TextBlock Style="{StaticResource MessageLabel}">2,500 members, 746 online</TextBlock>
+                </StackPanel>
+            </StackPanel>
+            
+        </Grid>
+        
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"></ColumnDefinition>
+                <ColumnDefinition Width="5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Margin="5" Source="Resources/Icons/icons8_Menu_32.png"></Image>
+
+            <Border Grid.Column="1" Margin="5,10" CornerRadius="12" BorderThickness="4" BorderBrush="#FFF5F5F7">
+                <StackPanel Orientation="Horizontal" Background="#FFF5F5F7">
+                    <Image Source="Resources/Icons/icons8_search6_32.png"></Image>
+                    <TextBox HorizontalAlignment="Stretch" Width="180" Text="Search" BorderThickness="0" Foreground="#FFC2C7CB" Background="#FFF5F5F7"></TextBox>
+
+                </StackPanel>
+            </Border>
+        </Grid>
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/Images/ромашка.jpg" Opacity="0.7" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="150"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Border Grid.Column="1" Grid.Row="1" Margin="5,10,50,10" CornerRadius="20" BorderThickness="6" BorderBrush="White">
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="50"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="Resources/Icons/icons8_smiling_32.png"></Image>
+                    <TextBox HorizontalAlignment="Left" Grid.Column="1" Width="410" Text="Message" BorderThickness="0" Foreground="#FFC4C5CA" Background="White"></TextBox>
+                    <Image Grid.Column="2" Source="Resources/Icons/icons8_paperclip_32.png" />
+                </Grid>
+            </Border>
+
+            <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White">
+                <Image Source="Resources/Icons/icons8_microphone_32.png" Margin="5"></Image>
+            </Border>
+        </Grid>
+
+
+        <Grid Grid.Row="1">
+            <ListBox Grid.Row="1" BorderThickness="0">
+                <ListBoxItem HorizontalContentAlignment="Stretch">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_bookmark_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Text="Saved Messengers" Style="{StaticResource NamesText}"></TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Eat Something!</TextBlock>
+                            <Image Grid.Row="0" Grid.Column="1" Source="Resources/Icons/icons8_double_tick_32.png" Style="{StaticResource WachPict}"></Image>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >19.25</Label>
+                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Style="{StaticResource GreyBorderMessageCount}">
+                                <Image Height="10" Width="10" Source="Resources/Icons/icons8_paperclip_32.png" Stretch="Uniform"></Image>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+
+                <ListBoxItem HorizontalContentAlignment="Stretch">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" HorizontalAlignment="Left" BorderBrush="GreenYellow" Margin="0,2"  CornerRadius="50" BorderThickness="3">
+                            <Image Stretch="Uniform" Source="Resources/Icons/icons8_Male_User_32.png" />
+                        </Border>
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Alicia Torreaux</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Bob seys hi</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >13.02</Label>
+                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Style="{StaticResource BorderMessageCount}">
+                                <TextBlock Foreground="White" VerticalAlignment="Center" FontSize="10" >2</TextBlock>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Roberto</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Say hallo to Alice</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >21.48</Label>
+                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Style="{StaticResource BorderMessageCount}">
+                                <TextBlock  Foreground="White" VerticalAlignment="Center" >1</TextBlock>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0"  Style="{StaticResource NamesText}">Campus Party</TextBlock>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" >
+                                <TextBlock Margin="5,0" FontWeight="DemiBold">Denny:</TextBlock>
+                                <TextBlock Width="110" Margin="0" Style="{StaticResource MessageLabel}" >Wow,almoust 2,500 members!</TextBlock>
+                            </StackPanel>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalContentAlignment="Stretch">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" HorizontalAlignment="Left" BorderBrush="GreenYellow"    CornerRadius="50" BorderThickness="3">
+                            <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        </Border>
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Karen Stanford</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Seville</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.11</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Cat Ideos</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Video</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >14.50</Label>
+                            <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Style="{StaticResource GreyBorderMessageCount}">
+                                <TextBlock Foreground="White" FontSize="10" VerticalAlignment="Center" >27</TextBlock>
+                            </Border>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Little Sister</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">I got the job at NASA!</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >14.44</Label>
+
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Monika Parker</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">I don't remember anything</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >14.20</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Surfers</TextBlock>
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0" >
+                                <TextBlock Margin="5,0" FontWeight="DemiBold">Denny:</TextBlock>
+                                <TextBlock Width="110" Margin="0" Style="{StaticResource MessageLabel}">Meet you at the beach</TextBlock>
+                            </StackPanel>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >11.00</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" HorizontalAlignment="Left" BorderBrush="GreenYellow"  CornerRadius="50" BorderThickness="3">
+                            <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        </Border>
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Deveeprasas Acharya</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">tryping...</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >10.34</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Xian Zhov</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Waghington D.C.</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >10.44</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+                <ListBoxItem HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="50">
+                    <Grid >
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="40"></ColumnDefinition>
+                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="Resources/Icons/icons8_Male_User_32.png" />
+                        <Grid Grid.Column="1" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="60"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition></RowDefinition>
+                                <RowDefinition></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource NamesText}">Karl Kalagin</TextBlock>
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource MessageLabel}">Halifax</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >10.27</Label>
+                        </Grid>
+                    </Grid>
+                </ListBoxItem>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>
