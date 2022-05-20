@@ -133,5 +133,17 @@
     <Resource Include="Resources\Icons\icons8_Done2_32.png" />
     <Resource Include="Resources\Icons\icons8_double_tick2_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icons8_telegram_app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icons8_pin_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icons8_bookmark2_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\ballons.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

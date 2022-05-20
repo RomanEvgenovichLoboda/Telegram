@@ -73,9 +73,29 @@ namespace Telegram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ballons {
+            get {
+                object obj = ResourceManager.GetObject("ballons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_bookmark_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_bookmark_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_bookmark2_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_bookmark2_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,16 @@ namespace Telegram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_pin_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_pin_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_search5_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_search5_32", resourceCulture);
@@ -197,6 +227,16 @@ namespace Telegram.Properties {
             get {
                 object obj = ResourceManager.GetObject("icons8_smiling_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Icon, аналогичного (Значок).
+        /// </summary>
+        internal static System.Drawing.Icon icons8_telegram_app {
+            get {
+                object obj = ResourceManager.GetObject("icons8_telegram_app", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         

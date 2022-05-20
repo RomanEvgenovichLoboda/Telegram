@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Telegram"
         mc:Ignorable="d"
-        Title="Telegram" Height="700" Width="1100">
+        Title="Telegram" Height="600" Width="1100" Icon="Resources/Icons/icons8_telegram_app.ico">
     <Window.Resources>
         <Style x:Key="NamesText">
             <Setter Property="Control.Margin" Value="5"></Setter>
@@ -52,7 +52,7 @@
             <Setter Property="Control.Background" Value="#FFEBFFDA"></Setter>
             <Setter Property="Control.BorderBrush" Value="#FFEBFFDA"></Setter>
             <Setter Property="Control.BorderThickness" Value="3"></Setter>
-            <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Control.HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="Padding" Value="0,2"></Setter>
             <Setter Property="Margin" Value="3"></Setter>
             <Setter Property="MaxWidth" Value="200"></Setter>
@@ -117,74 +117,88 @@
                 </StackPanel>
             </Border>
         </Grid>
-        <Grid Grid.Column="1" Grid.Row="1">
-            <Grid.Background>
-                <ImageBrush ImageSource="Resources/Images/ромашка.jpg" Opacity="0.7" Stretch="UniformToFill"/>
-            </Grid.Background>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition Width="150"></ColumnDefinition>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition></RowDefinition>
-                <RowDefinition Height="50"></RowDefinition>
-            </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                        <ColumnDefinition></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
-                    <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}">
+        
+            <Grid Grid.Column="1" Grid.Row="1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Resources/Images/ромашка.jpg" Opacity="0.7" Stretch="UniformToFill"/>
+                </Grid.Background>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="150"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition Height="50"></RowDefinition>
+                </Grid.RowDefinitions>
+            <ScrollViewer Visibility="Visible" Grid.Column="1" Grid.ColumnSpan="3">
+                <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}">
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Monica</TextBlock>
+                                <TextBlock Style="{StaticResource MessageLabel}" Foreground="#FFA3C6D8" Margin="3,0">https://www.forbes.com</TextBlock>
+                                <Image  Source="Resources/Images/peyzaj.png"></Image>
+                                <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Forbes</TextBlock>
+                                <TextBlock Style="{StaticResource NamesText}" Foreground="Black" Margin="3,0">The New Campus</TextBlock>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="10" Margin="3,0">Файл содержит дополнительные данные, обычно добавляемые цифровыми камерами или сканерами. Если файл после создания редактировался, то некоторые параметры могут не соответствовать текущему изображению.</TextBlock>
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                    <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessageGreen}">
                         <StackPanel>
-                            <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Monica</TextBlock>
-                            <TextBlock Style="{StaticResource MessageLabel}" Foreground="#FFA3C6D8" Margin="3,0">https://www.forbes.com</TextBlock>
-                            <Image  Source="Resources/Images/peyzaj.png"></Image>
-                            <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Forbes</TextBlock>
-                            <TextBlock Style="{StaticResource NamesText}" Foreground="Black" Margin="3,0">The New Campus</TextBlock>
-                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="10" Margin="3,0">Файл содержит дополнительные данные, обычно добавляемые цифровыми камерами или сканерами. Если файл после создания редактировался, то некоторые параметры могут не соответствовать текущему изображению.</TextBlock>
-                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Hello! Does anyone have a photo of party balloons?</TextBlock>
+                            <DockPanel>
+                                <Image DockPanel.Dock="Right" Height="15" Source="Resources/Icons/icons8_double_tick2_32.png"></Image>
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" Foreground="#FF80E257">16.38</Label>
+                            </DockPanel>
                         </StackPanel>
                     </Border>
-                </Grid>
-                <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessageGreen}">
-                    <StackPanel>
-                        
-                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Hello! Does anyone have a photo of party balloons?</TextBlock>
-                        <DockPanel>
-                            <Image DockPanel.Dock="Right" Height="15" Source="Resources/Icons/icons8_double_tick2_32.png"></Image>
-                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" Foreground="#FF80E257">16.38</Label>
-                        </DockPanel>
-                        
-                    </StackPanel>
-                </Border>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}" Width="200">
+                            <StackPanel>
+                                <Image Source="Resources/Images/ballons.png"></Image>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Hold on, her it is.</TextBlock>
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
 
 
 
+                </StackPanel>
+            </ScrollViewer>
 
-            </StackPanel>
-            
-            
-            
-            
+
+
             <Border Grid.Column="1" Grid.Row="1" Margin="5,10,50,10" CornerRadius="20" BorderThickness="6" BorderBrush="White">
-                <Grid Background="White">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="50"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Image Grid.Column="0" Source="Resources/Icons/icons8_smiling_32.png"></Image>
-                    <TextBox HorizontalAlignment="Left" Grid.Column="1" Width="410" Text="Message" BorderThickness="0" Foreground="#FFC4C5CA" Background="White"></TextBox>
-                    <Image Grid.Column="2" Source="Resources/Icons/icons8_paperclip_32.png" />
-                </Grid>
-            </Border>
-             <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White">
-                <Image Source="Resources/Icons/icons8_microphone_32.png" Margin="5"></Image>
-            </Border>
-        </Grid>
+                    <Grid Background="White">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="50"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image Grid.Column="0" Source="Resources/Icons/icons8_smiling_32.png"></Image>
+                        <TextBox HorizontalAlignment="Left" Grid.Column="1" Width="410" Text="Message" BorderThickness="0" Foreground="#FFC4C5CA" Background="White"></TextBox>
+                        <Image Grid.Column="2" Source="Resources/Icons/icons8_paperclip_32.png" />
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White">
+                    <Image Source="Resources/Icons/icons8_microphone_32.png" Margin="5"></Image>
+                </Border>
+            </Grid>
+       
 
 
         <Grid Grid.Row="1">
@@ -195,7 +209,7 @@
                             <ColumnDefinition Width="40"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
-                        <Image Source="Resources/Icons/icons8_bookmark_32.png" />
+                        <Image Source="Resources/Icons/icons8_bookmark2_32.png" />
                         <Grid Grid.Column="1" >
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -210,7 +224,7 @@
                             <Image Grid.Row="0" Grid.Column="1" Source="Resources/Icons/icons8_double_tick_32.png" Style="{StaticResource WachPict}"></Image>
                             <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >19.25</Label>
                             <Border Grid.Row="1" Grid.Column="1" CornerRadius="20" Style="{StaticResource GreyBorderMessageCount}">
-                                <Image Height="10" Width="10" Source="Resources/Icons/icons8_paperclip_32.png" Stretch="Uniform"></Image>
+                                <Image Height="10" Width="10" Source="Resources/Icons/icons8_pin_32.png" Stretch="Uniform"></Image>
                             </Border>
                         </Grid>
                     </Grid>
