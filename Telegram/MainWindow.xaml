@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Telegram"
         mc:Ignorable="d"
-        Title="Telegram" Height="600" Width="1100" Icon="Resources/Icons/icons8_telegram_app.ico">
+        Title="Telegram" Height="1200" Width="900" Icon="Resources/Icons/icons8_telegram_app.ico">
     <Window.Resources>
         <Style x:Key="NamesText">
             <Setter Property="Control.Margin" Value="5"></Setter>
@@ -123,7 +123,7 @@
                     <ImageBrush ImageSource="Resources/Images/ромашка.jpg" Opacity="0.7" Stretch="UniformToFill"/>
                 </Grid.Background>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
+                    <ColumnDefinition Width="110"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition Width="150"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
@@ -169,13 +169,33 @@
                         <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}" Width="200">
                             <StackPanel>
                                 <Image Source="Resources/Images/ballons.png"></Image>
-                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Hold on, her it is.</TextBlock>
+                                <TextBlock TextWrapping="Wrap" FontSize="10" Margin="3,0">Hold on, her it is.</TextBlock>
                                 <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
                             </StackPanel>
                         </Border>
                     </Grid>
-
-
+                    <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessageGreen}">
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Thanks !</TextBlock>
+                            <DockPanel>
+                                <Image DockPanel.Dock="Right" Height="15" Source="Resources/Icons/icons8_double_tick2_32.png"></Image>
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" Foreground="#FF80E257">16.38</Label>
+                            </DockPanel>
+                        </StackPanel>
+                    </Border>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}" Width="150">
+                            <StackPanel>
+                                <TextBlock TextWrapping="Wrap" FontSize="10" Margin="3,0">Wow, almoust 2,500 members!</TextBlock>
+                                <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
 
                 </StackPanel>
             </ScrollViewer>
