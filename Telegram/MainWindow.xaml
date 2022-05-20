@@ -39,6 +39,26 @@
             <Setter Property="Control.Margin" Value="0,2"></Setter>
             <Setter Property="Height" Value="15"></Setter>
         </Style>
+        <Style TargetType="Border" x:Key="BorderMessage">
+            <Setter Property="Control.Background" Value="White"></Setter>
+            <Setter Property="Control.BorderBrush" Value="White"></Setter>
+            <Setter Property="Control.BorderThickness" Value="3"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Left"></Setter>
+            <Setter Property="Padding" Value="0,2"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="MaxWidth" Value="250"></Setter>
+        </Style>
+        <Style TargetType="Border" x:Key="BorderMessageGreen">
+            <Setter Property="Control.Background" Value="#FFEBFFDA"></Setter>
+            <Setter Property="Control.BorderBrush" Value="#FFEBFFDA"></Setter>
+            <Setter Property="Control.BorderThickness" Value="3"></Setter>
+            <Setter Property="Control.HorizontalAlignment" Value="Right"></Setter>
+            <Setter Property="Padding" Value="0,2"></Setter>
+            <Setter Property="Margin" Value="3"></Setter>
+            <Setter Property="MaxWidth" Value="200"></Setter>
+            <Setter Property="Opacity" Value="0.9"></Setter>
+        </Style>
+     
         <Style x:Key="WachPict">
             <Setter Property="Control.Height" Value="20"></Setter>
             <Setter Property="Control.Width" Value="20"></Setter>
@@ -64,7 +84,7 @@
                 <ColumnDefinition Width="1.2*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
-                <Image Height="40" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                <Image Height="35" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
                 <StackPanel Orientation="Vertical">
                     <TextBlock Style="{StaticResource NamesText}">Campus Party</TextBlock>
                     <TextBlock Style="{StaticResource MessageLabel}">2,500 members, 746 online</TextBlock>
@@ -110,6 +130,45 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition Height="50"></RowDefinition>
             </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
+                    <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}">
+                        <StackPanel>
+                            <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Monica</TextBlock>
+                            <TextBlock Style="{StaticResource MessageLabel}" Foreground="#FFA3C6D8" Margin="3,0">https://www.forbes.com</TextBlock>
+                            <Image  Source="Resources/Images/peyzaj.png"></Image>
+                            <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Forbes</TextBlock>
+                            <TextBlock Style="{StaticResource NamesText}" Foreground="Black" Margin="3,0">The New Campus</TextBlock>
+                            <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="10" Margin="3,0">Файл содержит дополнительные данные, обычно добавляемые цифровыми камерами или сканерами. Если файл после создания редактировался, то некоторые параметры могут не соответствовать текущему изображению.</TextBlock>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessageGreen}">
+                    <StackPanel>
+                        
+                        <TextBlock TextWrapping="Wrap" HorizontalAlignment="Right" FontSize="10" Margin="3,0">Hello! Does anyone have a photo of party balloons?</TextBlock>
+                        <DockPanel>
+                            <Image DockPanel.Dock="Right" Height="15" Source="Resources/Icons/icons8_double_tick2_32.png"></Image>
+                            <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" Foreground="#FF80E257">16.38</Label>
+                        </DockPanel>
+                        
+                    </StackPanel>
+                </Border>
+
+
+
+
+            </StackPanel>
+            
+            
+            
+            
             <Border Grid.Column="1" Grid.Row="1" Margin="5,10,50,10" CornerRadius="20" BorderThickness="6" BorderBrush="White">
                 <Grid Background="White">
                     <Grid.ColumnDefinitions>
@@ -122,8 +181,7 @@
                     <Image Grid.Column="2" Source="Resources/Icons/icons8_paperclip_32.png" />
                 </Grid>
             </Border>
-
-            <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White">
+             <Border Grid.Column="1" Grid.Row="1" CornerRadius="20" HorizontalAlignment="Right" Margin="10" Background="White" BorderBrush="White">
                 <Image Source="Resources/Icons/icons8_microphone_32.png" Margin="5"></Image>
             </Border>
         </Grid>

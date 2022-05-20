@@ -126,5 +126,12 @@
   <ItemGroup>
     <Resource Include="Resources\Icons\icons8_menu_vertical_32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\peyzaj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icons8_Done2_32.png" />
+    <Resource Include="Resources\Icons\icons8_double_tick2_32.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -93,9 +93,29 @@ namespace Telegram.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_Done2_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_Done2_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_double_tick_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_double_tick_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_double_tick2_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_double_tick2_32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -176,6 +196,16 @@ namespace Telegram.Properties {
         internal static System.Drawing.Bitmap icons8_smiling_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8_smiling_32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap peyzaj {
+            get {
+                object obj = ResourceManager.GetObject("peyzaj", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
