@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Telegram"
         mc:Ignorable="d"
-        Title="Telegram" Height="1200" Width="900" Icon="Resources/Icons/icons8_telegram_app.ico">
+        Title="Telegram" Height="800" Width="1100" Icon="Resources/Icons/icons8_telegram_app.ico">
     <Window.Resources>
         <Style x:Key="NamesText">
             <Setter Property="Control.Margin" Value="5"></Setter>
@@ -79,9 +79,9 @@
 
         <Grid Grid.Column="1">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="2*"></ColumnDefinition>
-                <ColumnDefinition Width="1.2*"></ColumnDefinition>
+                <ColumnDefinition Width="190"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="220"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Horizontal">
                 <Image Height="35" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
@@ -95,8 +95,8 @@
                     <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8">Pinnet message</TextBlock>
                     <TextBlock Style="{StaticResource MessageLabel}">See ou tomorrow at 18.00...</TextBlock>
                 </StackPanel>
-                <Image Margin="10,10,0,10" Source="Resources/Icons/icons8_search5_32.png"></Image>
-                <Image HorizontalAlignment="Right" Margin="5"  Source="Resources/Icons/icons8_menu_vertical_32.png"></Image>
+                <Image Height="30" Source="Resources/Icons/icons8_search5_32.png"></Image>
+                <Image HorizontalAlignment="Right" Margin="0,5"  Source="Resources/Icons/icons8_menu_vertical_32.png"></Image>
             </StackPanel>
             
         </Grid>
@@ -139,14 +139,14 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
-                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}">
+                        <Border Grid.Column="1" Width="200" CornerRadius="10" Style="{StaticResource BorderMessage}">
                             <StackPanel>
                                 <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Monica</TextBlock>
                                 <TextBlock Style="{StaticResource MessageLabel}" Foreground="#FFA3C6D8" Margin="3,0">https://www.forbes.com</TextBlock>
                                 <Image  Source="Resources/Images/peyzaj.png"></Image>
                                 <TextBlock Style="{StaticResource NamesText}" Foreground="#FFA3C6D8" Margin="3,0">Forbes</TextBlock>
                                 <TextBlock Style="{StaticResource NamesText}" Foreground="Black" Margin="3,0">The New Campus</TextBlock>
-                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="10" Margin="3,0">Файл содержит дополнительные данные, обычно добавляемые цифровыми камерами или сканерами. Если файл после создания редактировался, то некоторые параметры могут не соответствовать текущему изображению.</TextBlock>
+                                <TextBlock TextWrapping="Wrap" HorizontalAlignment="Left" FontSize="8" Margin="3,0">Файл содержит дополнительные данные, обычно добавляемые цифровыми камерами или сканерами. Если файл после создания редактировался, то некоторые параметры могут не соответствовать текущему изображению.</TextBlock>
                                 <Label Grid.Row="0" Grid.Column="1" Style="{StaticResource LabelTime}" >16.38</Label>
                             </StackPanel>
                         </Border>
@@ -166,7 +166,7 @@
                             <ColumnDefinition></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Image VerticalAlignment="Bottom" Source="Resources/Icons/icons8_Male_User_32.png"></Image>
-                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}" Width="200">
+                        <Border Grid.Column="1" CornerRadius="10" Style="{StaticResource BorderMessage}" Width="250">
                             <StackPanel>
                                 <Image Source="Resources/Images/ballons.png"></Image>
                                 <TextBlock TextWrapping="Wrap" FontSize="10" Margin="3,0">Hold on, her it is.</TextBlock>
